@@ -1,0 +1,47 @@
+{
+  "name": "person-search-mcp",
+  "version": "1.0.0",
+  "description": "MCP server (and tiny CLI) that researches a real person from public web sources and returns a cited briefing. Wraps the public PersonSearch / Deep Search agent — no API key required.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "person-search",
+    "people-search",
+    "research",
+    "osint",
+    "openclaw",
+    "ai-agent"
+  ],
+  "homepage": "https://github.com/DhanushKenkiri/PersonSearchAgent-MCP#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DhanushKenkiri/PersonSearchAgent-MCP.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "person-search-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "start": "node dist/index.js",
+    "test": "npm run build && node --test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.6.3"
+  }
+}

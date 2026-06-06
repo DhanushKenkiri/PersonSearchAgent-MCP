@@ -1,0 +1,6 @@
+{
+  "name": "person-search",
+  "slug": "person-search",
+  "version": "1.0.0",
+  "description": "Research a real person from public web sources and return a cited briefing."
+}
