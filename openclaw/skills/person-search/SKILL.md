@@ -20,8 +20,7 @@ briefing. Powered by the PersonSearch "Deep Search" agent.
 The CLI must be installed:
 
 ```bash
-npm install -g github:DhanushKenkiri/PersonSearchAgent-MCP
-# after npm publish:  npm install -g person-search-mcp
+npm install -g @actualte/person-search-mcp
 ```
 
 ## How to run

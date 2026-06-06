@@ -32,20 +32,20 @@ Requires Node.js ≥ 18.
 
 ### Run it in an MCP client
 
-Add the server to your client's MCP config. **Today (no install needed)**, run it straight from GitHub:
+Add the server to your client's MCP config — `npx` fetches it, no clone or global install needed:
 
 ```jsonc
 {
   "mcpServers": {
     "person-search": {
       "command": "npx",
-      "args": ["-y", "github:DhanushKenkiri/PersonSearchAgent-MCP"]
+      "args": ["-y", "@actualte/person-search-mcp"]
     }
   }
 }
 ```
 
-Once published to npm, swap the args to `["-y", "person-search-mcp"]`.
+(You can also run it straight from source with `["-y", "github:DhanushKenkiri/PersonSearchAgent-MCP"]`.)
 
 Config file locations:
 - **Claude Desktop** — `claude_desktop_config.json` (`mcpServers` key)
@@ -66,9 +66,9 @@ Then point your client's `command`/`args` at `node` + the absolute path to `dist
 ### Try it without an MCP client (CLI)
 
 ```bash
-node dist/index.js search "Paul Graham" "https://x.com/paulg" "Y Combinator"
-# or, from anywhere, with no clone:
-npx -y github:DhanushKenkiri/PersonSearchAgent-MCP search "Paul Graham" "https://x.com/paulg"
+npx -y @actualte/person-search-mcp search "Paul Graham" "https://x.com/paulg" "Y Combinator"
+# or from a clone:
+node dist/index.js search "Paul Graham" "https://x.com/paulg"
 ```
 
 ---
@@ -104,12 +104,15 @@ The test suite (`test/mcp.test.mjs`) launches the built server over stdio and dr
 
 ## Publish (maintainer)
 
+Published as **`@actualte/person-search-mcp`**. To cut a new version:
+
 ```bash
-npm login
+npm version patch
 npm publish --access public
 ```
 
-After publishing, anyone can run it with `npx -y person-search-mcp`.
+If your npm account has **package staging** enabled, the publish lands in
+npmjs.com → *Staged Packages* — promote it there to make it live.
 
 ## License
 

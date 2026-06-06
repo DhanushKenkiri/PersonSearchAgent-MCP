@@ -1,6 +1,9 @@
 {
-  "name": "person-search-mcp",
+  "name": "@actualte/person-search-mcp",
   "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "MCP server (and tiny CLI) that researches a real person from public web sources and returns a cited briefing. Wraps the public PersonSearch / Deep Search agent — no API key required.",
   "keywords": [
     "mcp",

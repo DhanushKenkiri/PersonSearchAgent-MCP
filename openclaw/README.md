@@ -10,8 +10,7 @@ OpenClaw imports standard MCP servers through its built-in **`mcporter`** skill.
 
 ```
 command: npx
-args:    ["-y", "github:DhanushKenkiri/PersonSearchAgent-MCP"]
-         (after npm publish: ["-y", "person-search-mcp"])
+args:    ["-y", "@actualte/person-search-mcp"]
 ```
 
 Steps:
@@ -35,8 +34,7 @@ A ready-made skill lives in [`skills/person-search/`](skills/person-search/). It
 cp -r skills/person-search ~/.openclaw/skills/
 
 # 2. Make the CLI available (fast path — install once, globally)
-npm install -g github:DhanushKenkiri/PersonSearchAgent-MCP
-#   (after npm publish:  npm install -g person-search-mcp)
+npm install -g @actualte/person-search-mcp
 
 # 3. Enable the skill
 openclaw config patch  # set skills.entries.person-search.enabled = true
