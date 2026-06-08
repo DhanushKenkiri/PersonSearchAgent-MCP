@@ -20,6 +20,10 @@
     "type": "git",
     "url": "git+https://github.com/DhanushKenkiri/PersonSearchAgent-MCP.git"
   },
+  "bugs": {
+    "url": "https://github.com/DhanushKenkiri/PersonSearchAgent-MCP/issues"
+  },
+  "author": "Dhanush Kenkiri",
   "license": "MIT",
   "type": "module",
   "bin": {
